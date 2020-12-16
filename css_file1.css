@@ -202,4 +202,9 @@ p {
    .treat-wrapper{
      margin-right: -100px;
    }
+  #stickyNavbar
+{
+  position: -webkit-static; /* Safari */
+  position: static;
+  }
  }
