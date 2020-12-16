@@ -1,0 +1,205 @@
+/* loader */
+body{
+  font-family: Georgia, serif;
+  font-style: italic;
+  
+}
+ *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+#loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+  background:black;
+  position: fixed;
+  top: 0%;
+  z-index: 999999;
+}
+.load{
+  position:relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(45deg,transparent,transparent 40%,yellow);
+  animation: animate 1s linear infinite;
+}
+@keyframes animate{
+  0%{
+    transform: rotate(0deg);
+   filter: hue-rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+    filter: hue-rotate(90deg);
+  }
+  
+}
+.load:before{
+  content:'';
+  position: absolute;
+  top:5px;
+  left:5px;
+  right:5px;
+  bottom:5px;
+  background:black;
+  border-radius:50%;
+  z-index:1000; 
+}
+.load:after{
+  content:'';
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+    background: linear-gradient(45deg,transparent,transparent 40%,yellow);
+  border-radius:50%;
+  z-index:1000;
+  z-index:1;
+  filter: blur(20px);
+  
+}
+/* custom scroll bar */
+body::-webkit-scrollbar {
+  width: 1.5em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(206, 16, 111, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#040429), color-stop(100%,#257eb7));
+  border-radius: 50px;;
+}
+#stickyNavbar
+{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: green;
+  z-index: 999;
+}
+#container {
+  overflow:hidden;
+  position:relative;
+}
+#pixie {
+  z-index:0;
+  background:-moz-linear-gradient(top, #040429, #257eb7);
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#040429), color-stop(100%,#257eb7));
+}
+#mountains, #grass{
+  width:100%;
+  position:absolute;
+  bottom:0;
+}
+#mountains {
+  height:145px;
+  z-index:1;
+  background:url(https://www.transparentpng.com/thumb/mountain/68IzPF-mountain-clipart-png-photos.png) repeat-x 0 0;
+}
+#grass {
+  height:10px;
+  z-index:2;
+  background:url(https://www.transparentpng.com/thumb/bamboo/r3KsDK-png-green-cane-bamboo-grass-forest-soil.pnggrass.png) repeat-x left 10px;
+}
+#welcome{
+  font-size: 40px;
+  color: white;
+}
+/* stylish word */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.text {
+  position: relative;
+  font-weight: 600;
+  font-size: 55px;
+  position: absolute;
+  width: 490px;
+  left: 39%;
+  margin-left: -225px;
+  height: 40px;
+  top: 25%;
+  margin-top: -20px;
+  word-wrap: normal;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 220px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #e9d83c;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #b658a9;
+}
+/*  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .text {
+    font-size: 37px;   !important
+    position: relative;
+    left: 50%%;   
+    top: 50%%;
+    margin-left: -155px;
+   }
+   .treat-wrapper{
+     margin-right: -100px;
+   }
+ }
